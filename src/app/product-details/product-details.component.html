@@ -1,0 +1,30 @@
+<div class="p-3 mb-2 bg- text-white" class="bg-image card shadow-1-strong"
+ style="
+        background-image: url('http://iphonewallpaperworld.com/wp-content/uploads/2020/12/PC-4k-wallpapers-2-scaled.jpg');
+        height:100%; width:100%; ">
+
+<table class="table" border="2px" style="font-weight: bold;">
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">product name</th>
+    <th scope="col">product description</th>
+    <th scope="col">product price</th>
+    <th scope="col">product Image</th>
+    <th scope="col" colspan="2">Update/Delete</th>
+    
+  </tr>
+  <tr *ngFor="let res of result.products">
+    <td>{{res._id}}</td>
+    <td>{{res.productName}}</td>
+    <td>{{res.productDescription}}</td>
+    <td>{{res.productPrice}}</td>
+      <td><img src="{{res.productImageURL}}" alt="" width="200" height="100"></td>
+
+      <td><button type="submit" [routerLink]="['/edit-product/',res._id]">Update</button></td>
+
+      <td><button (click)="deleteProduct(res._id)" type="button" style="color: red;">Delete</button></td>
+
+    </tr>
+    
+</table>
+<th><button routerLink="/add-product">Add Product</button></th></div>

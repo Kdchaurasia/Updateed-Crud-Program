@@ -1,0 +1,18 @@
+<form #addData="ngForm" (ngSubmit)="addProduct(addData)">
+<label >Product Name</label>
+<input type="text" #productName="ngModel" ngModel name="productName" placeholder="Enter the product name">
+<br><br>
+<label >Product Description</label>
+<input type="text" #productDescription="ngModel" ngModel name="productDescription" placeholder="Enter the product Description">
+<br><br>
+<label >Product Price</label>
+<input type="text" #productPrice="ngModel" ngModel name="productPrice" placeholder="Enter the product Price">
+<br><br>
+<label >Product ImageUrl</label>
+<input type="text" #productImageURL="ngModel" ngModel name="productImageURL" placeholder="Enter the product ImageUrl">
+
+<br><br><br>
+<button type="submit" >Add Product</button>
+
+</form>
+

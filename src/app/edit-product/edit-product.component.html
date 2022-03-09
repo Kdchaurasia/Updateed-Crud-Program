@@ -1,0 +1,13 @@
+<form #editForm="ngForm" (ngSubmit)="editProduct(editForm)">
+    <input type="text" id="productName" name="productName" #productName="ngModel" ngModel [(ngModel)]="selectedProduct.productName">
+    <br>
+    <input type="text" id="productDescription" name="productDescription" #productDescription="ngModel" ngModel [(ngModel)]="selectedProduct.productDescription">
+    <br>
+    <input type="text" id="productPrice" name="productPrice" #productprice="ngModel" ngModel [(ngModel)]="selectedProduct.productPrice">
+    <br>
+    <input type="text" id="productImageURL" name="productImageURL" #productImageURL="ngModel" ngModel [(ngModel)]="selectedProduct.productImageURL">
+    <br>
+    
+    <button type="submit">Update Product</button>
+    
+    </form>
